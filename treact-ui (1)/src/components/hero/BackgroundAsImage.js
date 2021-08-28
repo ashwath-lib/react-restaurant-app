@@ -17,10 +17,10 @@ const StyledHeader = styled(Header)`
 `;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
-  background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+  background-image: url("https://i.ibb.co/QM5K6g8/Group-1.png");
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-0`;
 
 const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto`;
 const TwoColumn = tw.div`pt-24 pb-32 px-4 flex justify-between items-center flex-col lg:flex-row`;
@@ -59,21 +59,19 @@ export default () => {
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="#">
-        About
+        ABOUT US
       </NavLink>
       <NavLink href="#">
-        Blog
+        HOW IT WORKS
       </NavLink>
       <NavLink href="#">
-        Locations
+        TESTIMONIALS
       </NavLink>
-      <NavLink href="#">
-        Pricing
-      </NavLink>
+   
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink href="/#">
-        Hire Us
+        BOOK NOW
       </PrimaryLink>
     </NavLinks>
   ];
@@ -84,15 +82,18 @@ export default () => {
       <HeroContainer>
         <StyledHeader links={navLinks} />
         <TwoColumn>
-          <LeftColumn>
-            <Notification>We have now launched operations in Europe.</Notification>
+        <LeftColumn>
+       
+
             <Heading>
-              <span>Hire the best</span>
-              <br />
-              <SlantedBackground>Marketing Team.</SlantedBackground>
+              <span>Good Food for </span>
+              <span>Better Health</span>
+              
+              <br /> <Notification>We have now launched operations in Europe.</Notification>
             </Heading>
-            <PrimaryAction>Read Customer Stories</PrimaryAction>
+            <PrimaryAction>DISCOVER ME</PrimaryAction>
           </LeftColumn>
+
           <RightColumn>
             <StyledResponsiveVideoEmbed
               url="//player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1"
