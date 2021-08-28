@@ -105,6 +105,8 @@ import ComponentRenderer from "ComponentRenderer.js";
 import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 import AgencyLandingPage from "./demos/AgencyLandingPage"
+import RestaurantLandingPage from "./demos/RestaurantLandingPage"
+
 
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -118,8 +120,11 @@ export default function App() {
     <Router>
       <Switch>
    
-        <Route path="/">
+        <Route path="/" exact>
           <AgencyLandingPage />
+        </Route>
+        <Route path="/res" exact>
+          <RestaurantLandingPage />
         </Route>
       </Switch>
     </Router>

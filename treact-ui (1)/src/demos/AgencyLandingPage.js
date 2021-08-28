@@ -4,24 +4,81 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 
 import Hero from "components/hero/BackgroundAsImage.js";
-import Features from "components/features/DashedBorderSixFeatures";
+import Features from "components/features/ThreeColSimple.js";
+
 import MainFeature from "components/features/TwoColSingleFeatureWithStats2.js";
 import MainFeature2 from "components/features/TwoColWithTwoFeaturesAndButtons.js";
 import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
 import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
 import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
+import Testimoniala from "components/testimonials/ThreeColumnWithProfileImage.js";
+import Bloga from "components/blogs/GridWithFeaturedPost.js";
+
 import FAQ from "components/faqs/SimpleWithSideImage.js";
 import ContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
 import customerSupportIllustrationSrc from "images/customer-support-illustration.svg";
+import TabGrid from "components/cards/TabCardGrid.js";
+import chefIconImageSrc from "images/chef-icon.svg";
+import celebrationIconImageSrc from "images/celebration-icon.svg";
+import shopIconImageSrc from "images/shop-icon.svg";
 
-export default () => (
-  <AnimationRevealPage>
+
+export default () => {
+
+  const Subheading = tw.span`tracking-wider text-sm font-medium`;
+  const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const HighlightedTextInverse = tw.span`bg-gray-100 text-primary-500 px-4 transform -skew-x-12 inline-block`;
+  const Description = tw.span`inline-block mt-8`;
+  const imageCss = tw`rounded-4xl`;
+   return (<AnimationRevealPage>
     <Hero />
-    <MainFeature />
-    <Features />
-    <MainFeature2 />
-    <Portfolio />
+    <Features
+        heading={
+          <>
+            Amazing <HighlightedText>Services.</HighlightedText>
+          </>
+        }
+        cards={[
+          {
+            imageSrc: shopIconImageSrc,
+            title: "230+ Locations",
+            description: "Lorem ipsum donor amet siti ceali placeholder text",
+            url: "https://google.com"
+          },
+          {
+            imageSrc: chefIconImageSrc,
+            title: "Professional Chefs",
+            description: "Lorem ipsum donor amet siti ceali placeholder text",
+            url: "https://timerse.com"
+          },
+          {
+            imageSrc: celebrationIconImageSrc,
+            title: "Birthday Catering",
+            description: "Lorem ipsum donor amet siti ceali placeholder text",
+            url: "https://reddit.com"
+          }
+        ]}
+
+        imageContainerCss={tw`p-2!`}
+        imageCss={tw`w-20! h-20!`}
+      />
+    <TabGrid
+        heading={
+          <>
+            Checkout our <HighlightedText>menu.</HighlightedText>
+          </>
+        }
+      />
+         <Testimoniala
+        subheading=""
+        heading={<>Meet our <HighlightedText>Staff</HighlightedText></>}
+      />
+    {/* <Features /> */}
+    <Bloga
+        subheading="Blog"
+        heading={<>Restaurant <HighlightedText>Gallery</HighlightedText></>}
+      />
     <Testimonial
       subheading="Testimonials"
       heading={
@@ -54,19 +111,9 @@ export default () => (
       ]}
       textOnLeft={true}
     />
-    <FAQ
-      imageSrc={customerSupportIllustrationSrc}
-      imageContain={true}
-      imageShadow={false}
-      subheading="FAQs"
-      heading={
-        <>
-          Do you have <span tw="text-primary-500">Questions ?</span>
-        </>
-      }
-    />
-    <Blog />
+   
+    {/* <Blog /> */}
     <ContactUsForm />
     <Footer />
-  </AnimationRevealPage>
-);
+  </AnimationRevealPage>)
+};
