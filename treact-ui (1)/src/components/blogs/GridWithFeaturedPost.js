@@ -7,14 +7,17 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { SectionDescription } from "components/misc/Typography";
 import { ReactComponent as SvgDotPatternIcon } from "images/dot-pattern.svg";
 
-const HeadingContainer = tw.div`text-center`;
-const Subheading = tw(SubheadingBase)`mb-4`;
-const Heading = tw(SectionHeading)``;
-const Description = tw(SectionDescription)`mx-auto`;
+const HeadingContainer = tw.div `text-center`;
+const Subheading = tw(SubheadingBase)
+`mb-4`;
+const Heading = tw(SectionHeading)
+``;
+const Description = tw(SectionDescription)
+`mx-auto`;
 
-const Posts = tw.div`mt-12 flex flex-wrap -mr-3 relative`;
-const Post = tw.a`flex flex-col h-full bg-gray-200 rounded`;
-const PostImage = styled.div`
+const Posts = tw.div `mt-12 flex flex-wrap -mr-3 relative`;
+const Post = tw.a `flex flex-col h-full bg-gray-200 rounded`;
+const PostImage = styled.div `
   ${props => css`background-image: url("${props.imageSrc}");`}
   ${tw`h-64 sm:h-80 bg-center bg-cover rounded-t`}
 `;
@@ -66,45 +69,24 @@ export default ({
   posts = [
     {
       postImageSrc:
-        "https://images.unsplash.com/photo-1563784462041-5f97ac9523dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
-      authorImageSrc:
-        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.95&w=512&h=512&q=80",
-      title: "Enjoying the beach life while on a vacation",
-      description:
-        "Lorem ipsum dolor sit amet, consecteturious adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua now ele.",
-      authorName: "Adam Cuppy",
-      authorProfile: "Vlogger",
-      url: "https://reddit.com",
-      featured: true
+        "https://images.unsplash.com/photo-1533777419517-3e4017e2e15a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+        title: "Dinner with family",
+      
+    },
+    
+    {
+      postImageSrc:
+        "https://images.unsplash.com/photo-1581954548122-4dff8989c0f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80",
+      title: "Group dinner is the best thing",
+      authorName: "Sam Raj",
     },
     {
       postImageSrc:
-        "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      title: "Getting the most out of your vacation",
-      authorName: "Aaron Patterson",
-      url: "https://reddit.com"
+        "https://images.unsplash.com/photo-1564758913551-7212727c4b08?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80",
+      title: "Nothing better than taking a food pic",
+      authorName: "Vivek",
     },
-    {
-      postImageSrc:
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      title: "Choosing the perfect Safaris in Africa",
-      authorName: "Sam Phipphen",
-      url: "https://reddit.com"
-    },
-    {
-      postImageSrc:
-        "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      title: "Hiking during the monsoon in Asia",
-      authorName: "Tony Hawk",
-      url: "https://timerse.com"
-    },
-    {
-      postImageSrc:
-        "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      title: "Must carry items while travelling to Thailand",
-      authorName: "Himali Turn",
-      url: "https://timerse.com"
-    }
+    
   ]
 }) => {
   return (

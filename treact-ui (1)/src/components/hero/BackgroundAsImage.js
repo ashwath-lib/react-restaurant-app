@@ -89,7 +89,8 @@ export default () => {
               <span>Good Food for </span>
               <span>Better Health</span>
               
-              <br /> <Notification>We have now launched operations in Europe.</Notification>
+              
+              <Notification></Notification>
             </Heading>
             <PrimaryAction>DISCOVER ME</PrimaryAction>
           </LeftColumn>
